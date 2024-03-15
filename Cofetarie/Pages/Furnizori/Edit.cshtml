@@ -1,0 +1,86 @@
+﻿@page
+@model Cofetarie.Pages.Furnizori.EditModel
+@{
+}
+<br>
+ <h2>Editare date Furnizor</h2>
+
+ @if (Model.errorMessage.Length > 0){
+   <div class="alert alert-warning alert-dismissible fade show " role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+   </div>
+ }
+
+
+  <form method="POST">
+
+      <input type="hidden" name="id" value="@Model.furnizoriInfo.ID_Furnizori"/>
+
+      <div class="row mb-3">
+          <label class="col-sm-3 col-form-label"> Nume </label>
+          <div class="col-sm-6">
+              <input type="text" class="form-control" name="nume" value="@Model.furnizoriInfo.Nume" />
+          </div>
+      </div>
+    
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Strada</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="strada" value="@Model.furnizoriInfo.Strada" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Numar </label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="numar" value="@Model.furnizoriInfo.Numar" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Oras </label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="oras" value="@Model.furnizoriInfo.Oras" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Judet </label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="judet" value="@Model.furnizoriInfo.Judet" />
+        </div>
+    </div>
+    
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> NumarTelefon </label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="numartelefon" value="@Model.furnizoriInfo.NumarTelefon" />
+           
+        </div>
+    </div>
+    
+       <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> AdresaEmail </label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="adresaemail" value="@Model.furnizoriInfo.AdresaEmail" />
+           
+        </div>
+    </div>
+
+    @if (Model.succesMessage.Length > 0)
+    {
+        <div class="alert alert-warning alert-dismissible fade show " role="alert">
+            <strong>@Model.succesMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+
+    <div class="row mb-3">
+       <div class="offset-sm-3 col-sm-3 d-grid">
+           <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+        <div class="offset-sm-3  d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+
+  </form>

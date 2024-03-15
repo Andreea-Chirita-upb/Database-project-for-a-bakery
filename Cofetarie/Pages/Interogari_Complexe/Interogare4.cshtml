@@ -1,0 +1,29 @@
+﻿@page
+@model Cofetarie.Pages.Interogari_Complexe.Interogare4Model
+@{
+}
+<h1>Interogare 4</h1>
+
+<p>Aceasta este o interogare care afișează clientii care au plasat comenzi pregatite de angajatul cu functia de "cofetar chef""</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nume</th>
+            <th>Prenume</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model.RezultateInterogare4C)
+        {
+            <tr>
+                <td>@result.Nume</td>
+                <td>@result.Prenume</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-secondary" asp-page="/Interogari_Complexe/Index">Înapoi</a>
+

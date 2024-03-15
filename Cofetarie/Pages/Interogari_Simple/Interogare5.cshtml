@@ -1,0 +1,33 @@
+﻿@page
+@model Cofetarie.Pages.Interogari_Simple.Interogare5Model
+
+<h1>Interogare 5</h1>
+
+<p>Aceasta este o interogare care afișează lista clientilor care au cumparat produse care contin 'arahide caramelizate' pe lista ingredientelor si produsele pe care le-au cumparat cu acest ingredient </p>
+
+@if (Model.RezultateInterogare5.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NumeClient</th>
+                <th>NumeProdus</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in Model.RezultateInterogare5)
+            {
+                <tr>
+                    <td>@result.NumeClient</td>>
+                    <td>@result.NumeProdus</td>>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nu există rezultate pentru această interogare.</p>
+}
+
+<a class="btn btn-secondary" asp-page="/Interogari_Simple/Index">Înapoi</a>

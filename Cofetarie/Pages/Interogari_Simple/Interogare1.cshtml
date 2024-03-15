@@ -1,0 +1,24 @@
+﻿@page
+@model Cofetarie.Pages.Interogari_Simple.Interogare1Model
+@{
+}
+
+<h1>Interogare 1</h1>
+
+<form method="get">
+    <label for="minCalorii">Număr minim de calorii:</label>
+    <input type="number" step="0.1" name="minCalorii" id="minCalorii" required />
+    <button type="submit">Filtrează</button>
+</form>
+
+<p>Aceasta este o interogare care afișează Lista cu produsele care au un nr minim de calorii specificat si care contin ingrediente de la furnizorii de la care luam cele mai multe ingrediente</p>
+
+<ul>
+    @foreach (var result in Model.RezultateInterogare1)
+    {
+        <li>@result</li>
+    }
+</ul>
+
+<a class="btn btn-secondary" asp-page="/Interogari_Complexe/Index">Înapoi</a>
+

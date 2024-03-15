@@ -1,0 +1,32 @@
+﻿@page
+@model Cofetarie.Pages.Interogari_Complexe.Interogare2Model
+@{
+}
+
+<h1>Interogare 2</h1>
+
+<p>Aceasta este o interogare care afișează angajatii care au salariul mai mare decat salariul maxim al angajatilor care au fost angajati incepand cu anul 2017 si care lucreaza la comenzi care au cele mai multe produse in comanda</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nume Angajat</th>
+            <th>Prenume Angajat</th>
+            <th>Salariu</th>
+   
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model.RezultateInterogare2C)
+        {
+            <tr>
+                <td>@result.nume</td>
+                <td>@result.prenume</td>
+                <td>@result.salariu</td>
+         
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-secondary" asp-page="/Interogari_Complexe/Index">Înapoi</a>

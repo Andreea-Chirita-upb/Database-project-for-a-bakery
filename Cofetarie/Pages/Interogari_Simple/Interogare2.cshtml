@@ -1,0 +1,32 @@
+﻿@page
+@model Cofetarie.Pages.Interogari_Simple.Interogare2Model
+
+<h1>Interogare 2</h1>
+
+<p>Aceasta este o interogare care afișează lista clienților cu istoricul produselor comandate și cantitatea lor sortate dupa data plasarii comenzii.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nume Client</th>
+            <th>Prenume Client</th>
+            <th>Data Comenzii</th>
+            <th>Produs Cumparat</th>
+            <th>Cantitate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model.RezultateInterogare2)
+        {
+            <tr>
+                <td>@result.NumeClient</td>
+                <td>@result.PrenumeClient</td>
+                <td>@result.DataComenzii</td>
+                <td>@result.ProdusCumparat</td>
+                <td>@result.CantitateDinProdus </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-secondary" asp-page="/Interogari_Simple/Index">Înapoi</a>

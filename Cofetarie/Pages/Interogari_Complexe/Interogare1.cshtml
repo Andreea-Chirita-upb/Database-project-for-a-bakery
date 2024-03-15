@@ -1,0 +1,30 @@
+﻿@page
+@model Cofetarie.Pages.Interogari_Complexe.Interogare1Model
+@{
+}
+
+<h1>Interogare 1</h1>
+
+<p>Aceasta este o interogare care afișează produsele care au cel mai mare numar de calorii din fiecare categorie de produse, ordonate crescator dupa numarul de calorii</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Denumire Produs</th>
+            <th>Numar Calorii</th>
+            <th>Categorie Produs</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model.RezultateInterogare1C)
+        {
+            <tr>
+                <td>@result.DenumireProdus</td>
+                <td>@result.NumarCalorii</td>
+                <td>@result.CategorieProdus</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-secondary" asp-page="/Interogari_Complexe/Index">Înapoi</a>
